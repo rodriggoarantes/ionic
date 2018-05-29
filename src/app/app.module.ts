@@ -1,3 +1,4 @@
+import { CarroAgendamentoPage } from './../pages/carro-agendamento/carro-agendamento';
 import { CarroFormPage } from './../pages/carro-form/carro-form';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
@@ -27,6 +28,7 @@ export const firebase = {
     MyApp,
     HomePage,
     CarroFormPage,
+    CarroAgendamentoPage,
   ],
   imports: [
     BrowserModule ,
@@ -39,6 +41,7 @@ export const firebase = {
     MyApp,
     HomePage,
     CarroFormPage,
+    CarroAgendamentoPage,
   ],
   providers: [
     StatusBar,

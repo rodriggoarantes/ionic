@@ -1,3 +1,4 @@
+import { CarroAgendamentoPage } from './../carro-agendamento/carro-agendamento';
 import { CarroFormPage } from './../carro-form/carro-form';
 import { Observable } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
@@ -35,6 +36,11 @@ export class HomePage implements OnInit {
     this.loadingList();
   }
 
+  selecionaCarro(carro: Carro) {
+    console.log('click: ' + carro);
+    this.navCtrl.push(CarroAgendamentoPage, { obj: carro });
+  }
+
   // ------
 
   private loadingList() {
@@ -68,4 +74,7 @@ export class HomePage implements OnInit {
       }).present();
     }
   }
+
+  
+
 }
