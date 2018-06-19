@@ -1,13 +1,13 @@
 import { CarroAgendamentoPage } from './../carro-agendamento/carro-agendamento';
-import { CarroFormPage } from './../carro-form/carro-form';
 import { Observable } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
-import { NavController, LoadingController, Loading, AlertController } from 'ionic-angular';
+import { NavController, LoadingController, Loading, AlertController, IonicPage } from 'ionic-angular';
 
 import {Carro} from './../../models/carro.model'
 
 import { CarroProvider } from './../../providers/carros.provider';
 
+@IonicPage()
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -15,7 +15,6 @@ import { CarroProvider } from './../../providers/carros.provider';
 export class HomePage implements OnInit {
 
   listCarros: Observable<Carro[]>;
-  carroFormPage = CarroFormPage;
 
   private _loading: Loading;
 
@@ -38,7 +37,7 @@ export class HomePage implements OnInit {
 
   selecionaCarro(carro: Carro) {
     console.log('click: ' + carro);
-    this.navCtrl.push(CarroAgendamentoPage, { obj: carro });
+    this.navCtrl.push(CarroAgendamentoPage.name, { obj: carro });
   }
 
   // ------

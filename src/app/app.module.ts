@@ -1,5 +1,3 @@
-import { CarroAgendamentoPage } from './../pages/carro-agendamento/carro-agendamento';
-import { CarroFormPage } from './../pages/carro-form/carro-form';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 
@@ -11,7 +9,6 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
 import { CarroProvider } from '../providers/carros.provider';
 
 export const firebase = {
@@ -26,9 +23,6 @@ export const firebase = {
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
-    CarroFormPage,
-    CarroAgendamentoPage,
   ],
   imports: [
     BrowserModule ,
@@ -39,9 +33,6 @@ export const firebase = {
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage,
-    CarroFormPage,
-    CarroAgendamentoPage,
   ],
   providers: [
     StatusBar,

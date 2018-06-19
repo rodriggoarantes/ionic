@@ -5,5 +5,19 @@
 </ion-header>
 
 <ion-content padding>
-teste
+
+  <ion-item>
+    <ion-label>Nome</ion-label>
+    <ion-input placeholder="Nome" [(ngModel)]="carro.nome"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Preço</ion-label>
+    <ion-input placeholder="123,99" type="number" [(ngModel)]="carro.preco"></ion-input>
+  </ion-item>
+
+  <p>{{carro | json}}</p>
+
+  <button ion-button block (click)="inserirCarro(carro)">Salvar</button>
+
 </ion-content>

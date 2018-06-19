@@ -9,5 +9,9 @@ import { CarroFormPage } from './carro-form';
   imports: [
     IonicPageModule.forChild(CarroFormPage),
   ],
+  exports: [
+    CarroFormPage
+  ]
+  
 })
 export class CarroFormPageModule {}

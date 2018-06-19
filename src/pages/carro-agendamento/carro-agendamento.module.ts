@@ -9,5 +9,8 @@ import { CarroAgendamentoPage } from './carro-agendamento';
   imports: [
     IonicPageModule.forChild(CarroAgendamentoPage),
   ],
+  exports: [
+    CarroAgendamentoPage
+  ]
 })
 export class CarroAgendamentoPageModule {}
