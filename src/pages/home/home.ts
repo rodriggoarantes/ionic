@@ -36,7 +36,6 @@ export class HomePage implements OnInit {
   }
 
   selecionaCarro(carro: Carro) {
-    console.log('click: ' + carro);
     this.navCtrl.push(CarroAgendamentoPage.name, { obj: carro });
   }
 

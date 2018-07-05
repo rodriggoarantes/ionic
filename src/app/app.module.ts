@@ -1,3 +1,4 @@
+import { AcessorioProvider } from './../providers/acessorios.provider';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 
@@ -40,6 +41,7 @@ export const firebase = {
     {provide: ErrorHandler, useClass: IonicErrorHandler},
 
     CarroProvider,
+    AcessorioProvider,
   ]
 })
 export class AppModule {}

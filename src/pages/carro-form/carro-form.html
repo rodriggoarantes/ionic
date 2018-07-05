@@ -5,19 +5,30 @@
 </ion-header>
 
 <ion-content padding>
+<ion-list>
+    <ion-item-divider>Dados do veículo</ion-item-divider>
+    <ion-item>
+      <ion-label>Nome</ion-label>
+      <ion-input placeholder="Nome" [(ngModel)]="carro.nome"></ion-input>
+    </ion-item>
 
-  <ion-item>
-    <ion-label>Nome</ion-label>
-    <ion-input placeholder="Nome" [(ngModel)]="carro.nome"></ion-input>
-  </ion-item>
+    <ion-item>
+      <ion-label>Preço</ion-label>
+      <ion-input placeholder="123,99" type="number" [(ngModel)]="carro.preco"></ion-input>
+    </ion-item>
+  
+    <ion-item-divider margin-top>Acessórios</ion-item-divider>
+    <ion-item *ngFor="let acessorio of acessorios">
+      <ion-label>{{acessorio.nome}}</ion-label>
+      <ion-toggle [(ngModel)]="acessorio.check"></ion-toggle>
+    </ion-item>
 
-  <ion-item>
-    <ion-label>Preço</ion-label>
-    <ion-input placeholder="123,99" type="number" [(ngModel)]="carro.preco"></ion-input>
-  </ion-item>
+    <ion-item-divider margin-top></ion-item-divider>
 
-  <p>{{carro | json}}</p>
+    <ion-item-divider color="light">
+      <span item-right>Valor Final: R$ {{precoTotal}}</span>
+    </ion-item-divider>
 
   <button ion-button block (click)="inserirCarro(carro)">Salvar</button>
-
+</ion-list>
 </ion-content>

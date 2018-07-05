@@ -21,8 +21,9 @@
       <ion-icon ios="ios-options" md="md-options"></ion-icon>
       ACESSÓRIOS
     </ion-item-divider>
-    <ion-item>1</ion-item>
-    <ion-item>2</ion-item>
+    <ion-item *ngFor="let acessorio of carro?.acessorios">
+      <ion-label><h4>{{acessorio.nome}}</h4></ion-label>
+    </ion-item>
   </ion-item-group>
 
   <ion-item-divider color="light">
